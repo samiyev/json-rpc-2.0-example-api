@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "es5",
+    "experimentalDecorators": true,
+    "lib": [
+      "es2015",
+      "es2015.promise"
+    ],
+    "types": [
+      "node"
+    ],
+    "outDir": "./build",
+    "sourceMap": true
+  },
+  "files": [
+    "src/app.ts"
+  ]
+}
