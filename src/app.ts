@@ -1,5 +1,20 @@
+import {Composer, RPCServer} from "@samiyev/json-rpc-2.0";
 import {User} from "./modules/user";
-import {Composer} from "@samiyev/json-rpc-2.0";
+import * as config from './config';
+
+export * from "./modules/user";
+
+async function init(request, method) {
+
+}
+
+async function reject(client, request, method, error) {
+
+}
+
+async function resolve(client, request, method, result) {
+
+}
 
 const model = new Composer({
     defines: [
@@ -9,22 +24,8 @@ const model = new Composer({
         init: init,
         reject: reject,
         resolve: resolve
-    },
-    options: {
-        workers: 4
     }
 });
 
-async function init(method, params, sanction) {
 
-}
-
-async function reject(method, params, error) {
-
-}
-
-async function resolve(method, params, result) {
-
-}
-
-export * from "./modules/user";
+const server = new RPCServer(config.options, model);

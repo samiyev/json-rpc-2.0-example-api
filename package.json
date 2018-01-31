@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "description": "Example API",
   "main": "./build/index.js",
-  "scripts": {},
+  "scripts": {
+    "run": "node build/app.js",
+    "build": "del-cli build && tsc && run",
+    "nodemon": "nodemon -w build/",
+    "watch": "tsc -w",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run nodemon\" "
+  },
   "dependencies": {},
   "devDependencies": {
     "source-map-support": "*",
     "@types/node": "^7.0.4",
-    "typescript": "^2.5.3"
+    "typescript": "^2.5.3",
+    "concurrently": "^3.5.0",
+    "del-cli": "^1.1.0",
+    "nodemon": "^1.12.1"
   },
   "license": "MIT"
 }

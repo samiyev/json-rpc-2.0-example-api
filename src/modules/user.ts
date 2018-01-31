@@ -1,15 +1,14 @@
 import {Define, IFeature, IMethod} from "@samiyev/json-rpc-2.0";
 
-export class User extends Define {
-    public static modulename: string = 'user';
-    public static feature: IFeature;
+export class User {
+    // public static modulename;
 
     public static authorization: IMethod = {
         feature: {
             session: 'active'
         },
         operation: async function (params): Promise<any> {
-
+            console.log(params);
         }
     };
 
@@ -18,7 +17,8 @@ export class User extends Define {
             session: 'active'
         },
         operation: async function (params): Promise<any> {
-
+            console.log(params);
+            throw new Error("dsfkhfdksalf")
         }
     };
 
