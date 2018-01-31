@@ -17,7 +17,7 @@ export class User {
             session: 'active'
         },
         operation: async function (params): Promise<any> {
-            console.log(params);
+            console.log(this['api-session']);
             throw new Error("dsfkhfdksalf")
         }
     };

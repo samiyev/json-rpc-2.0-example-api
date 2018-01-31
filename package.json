@@ -2,11 +2,9 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Example API",
-  "main": "./build/index.js",
+  "main": "./build/app.js",
   "scripts": {
-    "run": "node build/app.js",
-    "build": "del-cli build && tsc && run",
-    "nodemon": "nodemon -w build/",
+    "nodemon": "nodemon -w build",
     "watch": "tsc -w",
     "start": "concurrently --kill-others \"npm run watch\" \"npm run nodemon\" "
   },
