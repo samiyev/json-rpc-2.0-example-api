@@ -8,7 +8,9 @@
     "watch": "tsc -w",
     "start": "concurrently --kill-others \"npm run watch\" \"npm run nodemon\" "
   },
-  "dependencies": {},
+  "dependencies": {
+    "@samiyev/json-rpc-2.0": "git://github.com/samiyev/json-rpc-2.0.git"
+  },
   "devDependencies": {
     "source-map-support": "*",
     "@types/node": "^7.0.4",
