@@ -5,16 +5,29 @@ export class User extends Define {
     public static sanction: ISanction;
 
     public static authorization: IMethod = {
-        sanction: {},
+        sanction: {
+            session: 'active'
+        },
         operation: async function (params): Promise<any> {
 
         }
     };
 
     public static registration = {
-        sanction: {},
+        sanction: {
+            session: 'active'
+        },
         action: async function (params): Promise<any> {
 
         }
     };
+
+    public static get_info = {
+        sanction: {
+            session: 'active'
+        },
+        action: async function (params): Promise<any> {
+
+        }
+    }
 }

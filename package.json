@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "Example API",
   "main": "./build/index.js",
-  "scripts": {
-
-  },
-  "dependencies": {
-  },
+  "scripts": {},
+  "dependencies": {},
   "devDependencies": {
     "source-map-support": "*",
     "@types/node": "^7.0.4",
